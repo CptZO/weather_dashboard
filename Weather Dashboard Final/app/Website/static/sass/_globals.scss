@@ -1,0 +1,52 @@
+
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  background-color: rgb(102, 102, 102);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
+main {
+  display: grid;
+  grid-template-columns:repeat(3, 1fr);
+  row-gap: 25px;  
+  background-color: rgb(102, 102, 102);
+
+  justify-items: center;
+}
+
+//Flexbox
+
+.flex {
+    display: flex;
+  
+    &-jc-sb {
+      justify-content: space-between;
+    }
+  
+    &-jc-c {
+      justify-content: center;
+    }
+  
+    &-ai-c {
+      align-items: center;
+    }
+  }
+  
+  .wet {
+    font-size: x-large;
+    color: aliceblue;
+  }

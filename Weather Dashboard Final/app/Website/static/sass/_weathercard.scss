@@ -1,0 +1,42 @@
+.weather-box{
+    margin-left: 20px;
+    padding: 25px;
+    margin-bottom: 0;
+
+    display: grid;
+    grid-template-columns: 50px 1fr;
+
+    width: 80%;
+    height: 100%;
+    align-items: center;
+
+    background: linear-gradient(
+        to right bottom,
+        rgb(139, 241, 254),
+        rgb(248, 146, 146)
+      );
+
+    border-radius: 25px;
+}
+
+.box-content {
+    padding: 0px 30px;
+}
+
+.close {
+    width: fit-content;
+    padding: 5px 6px;
+    position: relative;
+    left: 0px;
+    bottom: -16px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #000;
+    background-color: rgba(250, 100, 130, 0.57);
+    transform: background-color 400ms ease-in-out;
+
+    &:hover {
+        color: #000;
+        background-color: rgba(246, 64, 100, 0.896);
+    }
+}

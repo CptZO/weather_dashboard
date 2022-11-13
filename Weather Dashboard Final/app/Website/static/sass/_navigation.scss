@@ -1,0 +1,57 @@
+.header {
+  background: rgb(67, 67, 67);
+  box-shadow: 0 1rem 1rem rgba($color: #000000, $alpha: 0.1);
+
+  nav {
+    padding: 1.225rem 1.5rem;
+  }
+
+  &__links {
+    margin-right: 400px;
+    a {
+      position: relative;
+
+      color: rgb(251, 247, 247);
+      transition: color 300ms ease-in-out;
+
+      &:not(:last-child) {
+        margin-right: 32px;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        height: 5px;
+
+        left: 0;
+        right: 0;
+        bottom: -30px;
+        background: linear-gradient(to right, rgb(141, 255, 141), rgb(198, 255, 99));
+        opacity: 0;
+        transition: opacity 300ms ease-in-out;
+      }
+
+      &:hover {
+        color: #cdf98f;
+
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.logo {
+    height: 45px;
+    width: 55px;
+}
+
+.logo-box {
+  
+  h2 {
+    color: #e8f2da;
+    cursor: pointer;
+  }
+}

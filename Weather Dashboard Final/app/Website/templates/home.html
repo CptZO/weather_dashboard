@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}
+Home
+{% endblock %}
+
+
+{% block content %}
+        {% for weather in weather_data %}
+        <div class="weather-box">
+            <div class="box-logo">
+                <img src="http://openweathermap.org/img/wn/{{ weather.icon }}.png" alt="Weather-Logo">
+            </div>
+            <div class="box-content">
+                <h2>{{ weather.city }}</h2>
+                <p>{{ weather.temperature }}° F</p>
+                <p>{{ weather.description }}</p>
+            </div>
+            <a href="{{ url_for('views.delete_city', name=(weather.city)) }}">
+            <button type="button" class="close">Delete?</button>
+            </a>
+        </div>
+        {% endfor %}
+{% endblock %}

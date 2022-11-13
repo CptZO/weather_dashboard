@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--   FAVICON   -->
+    <link rel="shortcut icon" href="../static/images/Weatherfavi.svg" type="image/x-icon">
+    <!--   STYLESHEETS   -->
+    <link rel="stylesheet" href="../static/sass/style.css">
+    <title>
+        {% block title %}
+        Flask App
+        {% endblock %}
+    </title>
+</head>
+<body>
+    <header class="header">
+        <nav class="flex flex-jc-sb flex-ai-c">
+            <div class="flex flex-ai-c">
+                <h2 class="wet">Weather</h2>
+                <a href="#" class="weth">
+                    <img src="../static/images/Weatherfavi.svg" alt="weather icon" class="logo">
+                </a>
+            </div>
+
+            <div class="header__links">
+                <a href="/">Home</a>
+                <a href="https://openweathermap.org/" target="_blank">API</a>
+                <a href="https://github.com/Coffee-0/Backend-FLASK/tree/main/Weather%20Dashboard%20Final" target="_blank">Github</a>
+                <a href="#">Logout</a>
+            </div>
+        </nav>
+    </header>
+    <div class="search-bar">
+        <form method="POST" class="flex flex-ai-c">
+            <input type="text", class="city-name", name="city" placeholder="City">
+            <button type="submit">Add</button>
+        </form>
+    </div>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+</body>
+</html>
