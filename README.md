@@ -2,7 +2,7 @@
 
 ---
 
-####Goal:
+--> Goal:
 
 - Get the real time weather data from Open Weather API to display it to the user.
 - Create weather dashboards.
